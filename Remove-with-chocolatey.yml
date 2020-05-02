@@ -2,10 +2,11 @@
 - hosts: windows
   gather_facts: no
   tasks:
-  - name: Remove firefox,winscp,curl
+  - name: Install firefox,winscp,curl
     win_chocolatey:
-      name: 
-        - firefox
-        - curl
-        - winscp
+      name: '{{ item }}'
       state: absent
+    loop:
+    - firefox
+    - curl
+    - winscp
