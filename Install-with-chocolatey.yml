@@ -4,8 +4,9 @@
   tasks:
   - name: Install firefox,winscp,curl
     win_chocolatey:
-      name: 
-        - firefox
-        - curl
-        - winscp
+      name: '{{ item }}'
       state: present
+    loop:
+    - firefox
+    - curl
+    - winscp
