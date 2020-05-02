@@ -1,6 +1,6 @@
 ---
 - hosts: windows
-  gather_facts: yes
+  gather_facts: no
   tasks:
    - name: Remove Notepad++
      win_chocolatey:
