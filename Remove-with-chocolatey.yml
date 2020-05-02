@@ -1,0 +1,10 @@
+---
+- hosts: windows
+  tasks:
+  - name: Remove firefox,winscp,curl
+    win_chocolatey:
+      name: 
+        - firefox
+        - curl
+        - winscp
+      state: absent
