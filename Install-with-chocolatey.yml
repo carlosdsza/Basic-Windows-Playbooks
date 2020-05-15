@@ -8,5 +8,4 @@
       state: present
     loop:
     - firefox
-    - curl
-    - winscp
+    - git
