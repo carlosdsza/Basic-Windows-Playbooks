@@ -2,10 +2,11 @@
 - hosts: windows
   gather_facts: no
   tasks:
-  - name: remove firefox,winscp,curl
+  - name: remove firefox
     win_chocolatey:
-      name: '{{ item }}'
+      name: firefox
       state: absent
-    loop:
-    - firefox
-    - git
+ - name: remove Git
+    win_chocolatey:
+      name: git
+      state: absent  
