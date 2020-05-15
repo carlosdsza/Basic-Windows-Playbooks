@@ -2,10 +2,12 @@
 - hosts: windows
   gather_facts: no
   tasks:
-  - name: Install firefox,winscp,curl
+  - name: Install firefox
     win_chocolatey:
-      name: '{{ item }}'
+      name: firefox
       state: present
-    loop:
-    - firefox
-    - git
+  - name: Install Git
+    win_chocolatey:
+      name: git
+      state: present
+ 
