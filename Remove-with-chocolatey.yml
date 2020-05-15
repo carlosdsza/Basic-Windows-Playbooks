@@ -2,11 +2,13 @@
 - hosts: windows
   gather_facts: no
   tasks:
+  
   - name: remove firefox
     win_chocolatey:
       name: firefox
       state: absent
- - name: remove Git
+
+  - name: remove Git
     win_chocolatey:
       name: git
       state: absent  
