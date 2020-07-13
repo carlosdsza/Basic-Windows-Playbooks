@@ -4,7 +4,7 @@
   tasks:
   
    - name: Install package dependencies
-    win_chocolatey:
+     win_chocolatey:
       name:
        - chocolatey-core.extension
        - chocolatey-windowsupdate.extension
