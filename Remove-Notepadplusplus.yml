@@ -2,6 +2,14 @@
 - hosts: windows
   gather_facts: no
   tasks:
+  
+   - name: Install package dependencies
+    win_chocolatey:
+      name:
+       - chocolatey-core.extension
+       - chocolatey-windowsupdate.extension
+      state: present
+      
    - name: Remove Notepad++
      win_chocolatey:
        name: notepadplusplus
