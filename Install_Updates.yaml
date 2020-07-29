@@ -1,0 +1,12 @@
+---
+- hosts: windows
+  gather_facts: no
+  tasks:
+
+    - name: Install only particular updates based on the KB numbers
+      win_updates:
+        category_name:
+        - SecurityUpdates
+        whitelist:
+        - KB4558998
+        - KB4567327
