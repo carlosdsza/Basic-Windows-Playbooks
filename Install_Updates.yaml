@@ -8,5 +8,4 @@
         category_name:
         - SecurityUpdates
         whitelist:
-        - KB4558998
-        - KB4567327
+        - KB2267602
