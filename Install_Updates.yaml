@@ -10,6 +10,7 @@
         whitelist:
         - KB2267602
         - KB4561608
+        - KB4558998
         reboot: yes
         
 #     - name: Reboot Now
