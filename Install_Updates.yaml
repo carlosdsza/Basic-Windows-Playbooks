@@ -8,11 +8,14 @@
         category_name:
         - SecurityUpdates
         whitelist:
-        - KB2267602
-        - KB4561608
-        - KB4558998
-        reboot: yes
+#         - KB2267602
+#         - KB4561608
+#         - KB4558998
+        - KB4569776
+        #reboot: yes
+        #reboot_timeout: 120
         
-#     - name: Reboot Now
-#       win_reboot:
-#         # test_command: 'exit (Get-Service -Name Netlogon).Status -ne "Running"'
+     - name: Reboot Now
+       win_reboot:
+        reboot_timeout: 120
+        shutdown_timeout: 30
