@@ -13,4 +13,4 @@
     - name: Ensure we wait long enough for the updates to be applied during reboot
       win_updates:
         reboot: yes
-        reboot_timeout: 3600
+        # reboot_timeout: 3600
