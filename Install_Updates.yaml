@@ -11,6 +11,6 @@
         - KB2267602
         # reboot: yes
         
-    - name: Validate that the netlogon service has started, before running the next task
+    - name: Reboot Now
       win_reboot:
-        test_command: 'exit (Get-Service -Name Netlogon).Status -ne "Running"'
+        # test_command: 'exit (Get-Service -Name Netlogon).Status -ne "Running"'
