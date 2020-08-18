@@ -9,8 +9,9 @@
         - SecurityUpdates
         whitelist:
         - KB2267602
-        # reboot: yes
+        - KB4561608
+        reboot: yes
         
-    - name: Reboot Now
-      win_reboot:
-        # test_command: 'exit (Get-Service -Name Netlogon).Status -ne "Running"'
+#     - name: Reboot Now
+#       win_reboot:
+#         # test_command: 'exit (Get-Service -Name Netlogon).Status -ne "Running"'
