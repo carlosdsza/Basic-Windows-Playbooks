@@ -8,13 +8,14 @@
         category_name:
         - SecurityUpdates
         whitelist:
-#         - KB2267602
-#         - KB4561608
-#         - KB4558998
+        - KB4566424
+        - KB4565349
+        - KB4552924
         - KB4569776
-        #reboot: yes
-        #reboot_timeout: 120
-    - name: Reboot Now
-      win_reboot:
-        reboot_timeout: 120
-        shutdown_timeout: 30
+        reboot: yes
+        reboot_timeout: 300
+    
+#     - name: Reboot Now
+#       win_reboot:
+#         reboot_timeout: 120
+#         shutdown_timeout: 30
