@@ -14,8 +14,7 @@
         - KB4569776
         #reboot: yes
         #reboot_timeout: 120
-        
-     - name: Reboot Now
-       win_reboot:
-         reboot_timeout: 120
-         shutdown_timeout: 30
+    - name: Reboot Now
+      win_reboot:
+        reboot_timeout: 120
+        shutdown_timeout: 30
