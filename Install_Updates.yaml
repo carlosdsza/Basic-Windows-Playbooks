@@ -9,9 +9,8 @@
         - SecurityUpdates
         whitelist:
         - KB2267602
-        reboot: yes
+        # reboot: yes
         
-#     - name: Ensure we wait long enough for the updates to be applied during reboot
-#       win_updates:
-#         reboot: yes
-#         # reboot_timeout: 3600
+    - name: Validate that the netlogon service has started, before running the next task
+      win_reboot:
+        test_command: 'exit (Get-Service -Name Netlogon).Status -ne "Running"'
