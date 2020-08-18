@@ -1,0 +1,15 @@
+---
+- hosts: windows
+  gather_facts: no
+  tasks:
+
+    # Install a Windows feature and reboot if necessary
+    - name: Install IIS Web-Server
+      win_feature:
+        name: Web-Server
+      register: iis_install
+
+    - name: Reboot when Web-Server feature requires it
+      win_reboot:
+      when: iis_install.reboot_required
+  
