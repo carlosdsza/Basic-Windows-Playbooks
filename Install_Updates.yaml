@@ -7,7 +7,7 @@
       win_updates:
         category_name: ["CriticalUpdates", "SecurityUpdates", "UpdateRollups"]
         whitelist:
-        - KB4566424
+        # - KB4566424
         - KB4565349
         - KB4552924
         - KB4569776
