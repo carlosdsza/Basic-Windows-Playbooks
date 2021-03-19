@@ -5,12 +5,14 @@
 
     - name: Install only particular updates based on the KB numbers
       win_updates:
-        category_name: ["CriticalUpdates", "SecurityUpdates", "UpdateRollups"]
+        # category_name: ["CriticalUpdates", "SecurityUpdates", "UpdateRollups"]
+        category_name: 
+        -  SecurityUpdates
         whitelist:
-        # - KB4566424
-        - KB4565349
-        - KB4552924
-        - KB4569776
+        - KB4535680
+        # - KB4565349
+        # - KB4552924
+        # - KB4569776
         reboot: yes
         reboot_timeout: 300
     
