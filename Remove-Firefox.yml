@@ -14,3 +14,8 @@
     win_chocolatey:
       name: firefox
       state: absent
+
+  - name: Reboot Now
+    win_reboot:
+      reboot_timeout: 120
+      shutdown_timeout: 30
