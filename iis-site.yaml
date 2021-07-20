@@ -51,12 +51,12 @@
             dest: '{{ item.path }}\index.html'
           with_items: "{{ iis_sites }}"
 
-        - name: Show website addresses
-          debug:
-            msg: "{{ item }}"
-          loop:
-            - http://{{ ansible_host }}:8080
-            - http://{{ ansible_host }}:8081
+        # - name: Show website addresses
+        #   debug:
+        #     msg: "{{ item }}"
+        #   loop:
+        #     - http://{{ ansible_host }}:8080
+        #     - http://{{ ansible_host }}:8081
 
       handlers:
         - name: restart iis service
