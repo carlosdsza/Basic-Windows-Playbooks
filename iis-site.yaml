@@ -19,6 +19,11 @@
             name: Web-Server
             state: present
 
+        - name: Restart a service
+          win_service:
+            name: W3Svc
+            state: started
+
         - name: Create site directory structure
           win_file:
             path: "{{ item.path }}"
