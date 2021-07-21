@@ -19,7 +19,7 @@
             name: Web-Server
             state: present
 
-        - name: Start / Restart if not running the Wen Service
+        - name: Start / Restart if not running the Web Service
           win_service:
             name: W3Svc
             state: started
