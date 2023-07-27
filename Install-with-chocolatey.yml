@@ -15,8 +15,8 @@
       name: firefox
       state: present
  
-  - name: Install Git
+  - name: Install Notepad +
     win_chocolatey:
-      name: git
+      name: notepadplusplus
       state: present
  

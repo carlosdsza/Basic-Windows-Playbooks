@@ -15,9 +15,9 @@
       name: firefox
       state: absent
 
-  - name: remove Git
+  - name: remove Notepad +
     win_chocolatey:
-      name: git
+      name: notepadplusplus
       state: absent  
 
   - name: Reboot Now
