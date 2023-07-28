@@ -20,6 +20,11 @@
       name: notepadplusplus
       state: absent  
 
+  - name: remove Notepad + installer
+    win_chocolatey:
+      name: notepadplusplus.install
+      state: absent
+
   - name: Reboot Now
     win_reboot:
       reboot_timeout: 240
