@@ -14,3 +14,8 @@
      win_chocolatey:
        name: notepadplusplus
        state: absent
+
+   - name: Remove Notepad++ installer
+     win_chocolatey:
+       name: notepadplusplus.install
+       state: absent
