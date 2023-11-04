@@ -1,8 +1,8 @@
 ---
     - hosts: windows
       name: This is a play within a playbook
-      vars_files:
-        - vars/winvars.yaml
+      # vars_files:
+      #   - vars/winvars.yaml
       vars:
         iis_sites:
           - name: 'Ansible Playbook Test'
