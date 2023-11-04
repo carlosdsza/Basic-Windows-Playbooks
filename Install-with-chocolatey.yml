@@ -1,5 +1,5 @@
 ---
-- hosts: IN-wf-ansible*
+- hosts: WIN-wf-ansible*
   gather_facts: no
   tasks:
   
