@@ -31,7 +31,7 @@
           with_items: "{{ iis_sites }}"
 
         - name: Create IIS site
-          ansible.windows.win_iis_website:
+          win_iis_website:
             name: "{{ item.name }}"
             state: started
             port: "{{ item.port }}"
