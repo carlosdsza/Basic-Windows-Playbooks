@@ -15,7 +15,6 @@
 
       tasks:
         - name: Install IIS
-          #ansible.windows.win_feature:
           ansible.windows.win_optional_feature:
             name: IIS-WebServer
             include_parent: true
@@ -33,7 +32,8 @@
           with_items: "{{ iis_sites }}"
 
         - name: Create IIS site
-          win_iis_website:
+          microsoft.iis.website
+          #win_iis_website:
             name: "{{ item.name }}"
             state: started
             port: "{{ item.port }}"
