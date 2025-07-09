@@ -40,7 +40,7 @@
           notify: restart iis service
 
         - name: Open port for site on the firewall
-          ansible.windows.win_firewall_rule:
+          win_firewall_rule:
             name: "iisport{{ item.port }}"
             enable: yes
             state: present
