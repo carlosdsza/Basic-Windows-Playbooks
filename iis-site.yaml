@@ -15,7 +15,8 @@
 
       tasks:
         - name: Install IIS
-          ansible.windows.win_feature:
+          #ansible.windows.win_feature:
+          ansible.windows.win_optional_feature:
             name: Web-Server
             state: present
 
