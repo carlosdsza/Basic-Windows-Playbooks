@@ -32,8 +32,7 @@
           with_items: "{{ iis_sites }}"
 
         - name: Create IIS site
-          microsoft.iis.website
-          #win_iis_website:
+          win_iis_website:
             name: "{{ item.name }}"
             state: started
             port: "{{ item.port }}"
