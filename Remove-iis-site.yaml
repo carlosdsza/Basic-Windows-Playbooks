@@ -20,7 +20,7 @@
           port: "{{ item.port }}"
           physical_path: "{{ item.path }}"
         with_items: "{{ iis_sites }}"
-        notify: restart iis service   
+        # notify: restart iis service   
       
       - name: Stop the Web Service
         ansible.windows.win_service:
@@ -38,7 +38,7 @@
           path: "{{ item.path }}"
           state: absent
         with_items: "{{ iis_sites }}"
-      
+
       - name: Close port for site on the firewall
         win_firewall_rule:
           name: "iisport{{ item.port }}"
@@ -49,6 +49,7 @@
           direction: In
           protocol: Tcp
         with_items: "{{ iis_sites }}"
+       
         # - name: Template simple web site to iis_site_path as index.html
         #   ansible.windows.win_template:
         #     src: 'index.html.j2'
@@ -61,9 +62,9 @@
         #   loop:
         #     - http://{{ ansible_host }}:8080
         #     - http://{{ ansible_host }}:8081
-    handlers:
-      - name: restart iis service
-        ansible.windows.win_service:
-         name: W3Svc
-         state: restarted
-        start_mode: auto
+    # handlers:
+    #   - name: restart iis service
+    #     ansible.windows.win_service:
+    #      name: W3Svc
+    #      state: restarted
+    #      start_mode: auto
