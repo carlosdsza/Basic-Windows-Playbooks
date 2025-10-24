@@ -20,7 +20,7 @@
           port: "{{ item.port }}"
           physical_path: "{{ item.path }}"
         with_items: "{{ iis_sites }}"
-       # notify: restart iis service   
+        notify: restart iis service   
       
       - name: Stop the Web Service
         ansible.windows.win_service:
@@ -62,8 +62,8 @@
         #     - http://{{ ansible_host }}:8080
         #     - http://{{ ansible_host }}:8081
     handlers:
-       - name: restart iis service
-         ansible.windows.win_service:
-          name: W3Svc
-          state: restarted
-         start_mode: auto
+      - name: restart iis service
+        ansible.windows.win_service:
+         name: W3Svc
+         state: restarted
+        start_mode: auto
